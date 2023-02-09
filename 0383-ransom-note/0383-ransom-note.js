@@ -13,7 +13,6 @@ var canConstruct = function(ransomNote, magazine) {
     magazine.split("").forEach((v)=>{
         obj[v]?obj[v]-=1:obj[v]=0
     })
-    console.log(obj)
     for(item of Object.values(obj)){
         if(item!==0) return false
     }
