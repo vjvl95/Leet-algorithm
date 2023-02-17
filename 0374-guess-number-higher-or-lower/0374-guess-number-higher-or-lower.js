@@ -12,17 +12,23 @@
  * @return {number}
  */
 var guessNumber = function(n) {
+    let l=0
+    let r=n
+    let result;
+    let mid;
     while(1){
-        let result=guess(n)
+        mid=Math.trunc((l+r)/2)
+        result=guess(mid)
+
         if(result===-1){
-           n-=1
+           r=mid-1
         }
         else if(result===1){
-                        n+=1
+                        l=mid+1
         }
         else{
             break
         }
     }
-    return n
+    return mid
 };
