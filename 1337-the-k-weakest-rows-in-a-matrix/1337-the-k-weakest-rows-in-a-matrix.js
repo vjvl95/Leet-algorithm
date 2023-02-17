@@ -15,5 +15,6 @@ var kWeakestRows = function(mat, k) {
     for(let i=0;i<k;i++){
         res.push(arr[i][1])
     }
+    
     return res    
 };
